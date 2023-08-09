@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Global styles for all elements */
+/* Sets the box-sizing property to border-box to include padding and borders in element's total width and height */
+/* Sets margin and padding to 0 for all elements */
+/* Sets the font-family to "Open Sans" for all elements */
+
+body {
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* Styles for the body element */
+/* Sets the background color to light gray */
+/* Hides horizontal scrollbar */
+
+.header-bar {
+  width: 100vw;
+  background-color: navy;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+}
+
+/* Styles for the header-bar class */
+/* Sets the width to 100% of the viewport width */
+/* Sets the background color to navy */
+/* Sets the text color to white */
+/* Centers the text */
+/* Adds padding of 10px */
+/* Sets the font size to 40px */
+
+/*Position Relative is important for location-info*/
+.map-container {
+  position: relative;
+  width: 100vw;
+  height: 850px;
+}
+
+/* Styles for the map-container class */
+/* Sets the position to relative */
+/* Sets the width to 100% of the viewport width */
+/* Sets the height to 800px */
+
+.location-icon {
+  font-size: 2rem;
+  position: relative;
+}
+
+/* Styles for the location-icon class */
+/* Sets the font size to 2rem */
+/* Sets the position to relative */
+
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styles for the loader-container class */
+/* Sets the position to absolute */
+/* Sets the top and left to 0 */
+/* Sets the display to flex */
+/* Centers the content horizontally and vertically */
+/* Sets the width and height to 100% */
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(9, 9, 36);
+}
+
+/* Styles for the loader class */
+/* Sets the display to flex */
+/* Sets the flex direction to column */
+/* Centers the content horizontally and vertically */
+/* Sets the minimum height to 100% of the viewport height */
+/* Sets the background color to dark blue */
+
+.loader img {
+  height: 65vh;
+}
+
+/* Styles for the loader img element */
+/* Sets the height to 65% of the viewport height */
+
+.loader h1{
+  color: white;
+  font-size: 40px;
+  z-index: 2;
+  animation: blinker 2s linear infinite;
+}
+
+/* Styles for the loader h1 element */
+/* Sets the text color to white */
+/* Sets the font size to 40px */
+/* Sets the z-index to 2 */
+/* Adds a blinking animation that lasts for 2 seconds and repeats infinitely */
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Keyframe animation for the blinker animation */
+/* Sets the opacity to 0 at 50% of the animation */
+
+.cluster-marker {
+  color: #fff;
+  background: firebrick;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the cluster-marker class */
+/* Sets the text color to white */
+/* Sets the background color to firebrick */
+/* Sets the border radius to 50% to make it circular */
+/* Adds padding of 10px */
+/* Centers the content horizontally and vertically */
+
+.location-info {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  width: 400px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: lightyellow;
+  border-radius: 10px;
+  font-size: 20px;
+  color: navy;
+}
+
+/* Styles for the location-info class */
+/* Sets the position to absolute */
+/* Sets the top and right to 60px */
+/* Sets the width to 400px */
+/* Sets the minimum height to 200px */
+/* Adds padding of 20px */
+/* Sets the background color to light yellow */
+/* Sets the border radius to 10px */
+/* Sets the font size to 20px */
+/* Sets the text color to navy */
+
+.location-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styles for the location-info ul element */
+/* Removes the bullet points */
+/* Removes the padding */
+
+.location-info li {
+  padding: 5px 0;
+}
+
+/* Styles for the location-info li element */
+/* Adds padding of 5px to the top and bottom */
+/* Removes padding from left and right */
+
+/* Search Styling */
+
+.search-container {
+  margin: 10px 0 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles for the search-container class */
+/* Adds margin of 10px to the top and 20px to the bottom */
+/* Sets the display to flex */
+/* Centers the content horizontally */
+
+.search-container > * {
+  display: inline-block;
+}
+
+/* Styles for all child elements of the search-container class */
+/* Sets the display to inline-block */
+
+.search-container p {
+  margin: 0 20px 0 20px;
+  font-size: 20px;
+}
+
+/* Styles for the search-container p element */
+/* Adds margin of 0 to the top and bottom */
+/* Adds margin of 20px to the left and right */
+/* Sets the font size to 20px */
+
+/* Font Styling for browser compatibility */
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+/* Styles for button, input, select, and textarea elements */
+/* Sets the font family to inherit */
+/* Sets the font size to 100% */
+
+.search-container input[type="text"] {
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  max-width: 1400px;
+  margin: 8px 20px 0 0;
+  padding: 0 0 0 10px;
+}
+
+/* Styles for the search-container input[type="text"] element */
+/* Sets the font family to inherit */
+/* Removes the outline */
+/* Sets the width to 100% */
+/* Sets the maximum width to 1400px */
+/* Adds margin of 8px to the top, 20px to the right, and 0 to the bottom and left */
+/* Adds padding of 0 to the top, right, and bottom and 10px to the left */
+
+.search-table {
+  margin: 0 auto;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1600px;
+  text-align: left;
+}
+
+/* Styles for the search-table class */
+/* Centers the table horizontally */
+/* Sets the table layout to fixed */
+/* Collapses the borders */
+/* Sets the width to 100% */
+/* Sets the maximum width to 1600px */
+/* Sets the text alignment to left */
+
+.search-table th {
+  background-color: navy;
+  color: white;
+}
+
+/* Styles for the search-table th element */
+/* Sets the background color to navy */
+/* Sets the text color to white */
+
+.search-table tr:nth-child(even) {
+  background-color: lightblue;
+}
+
+/* Styles for every even row of the search-table */
+/* Sets the background color to light blue */
+
+.search-table th,
+td {
+  padding: 10px;
+}
+
+/* Styles for the search-table th and td elements */
+/* Adds padding of 10px to all sides */
+ 
+.option-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Styles for the option-container class */
+/* Sets the display to flex */
+/* Centers the content horizontally */
+/* Adds margin of 20px to the top */
+
+.option-container p {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Styles for the option-container p element */
+/* Adds margin of 0 to the top and bottom */
+/* Adds margin of 10px to the right */
+/* Sets the font size to 20px */
